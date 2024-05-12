@@ -13,26 +13,30 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{asset('assets-fe/css/styles.css')}}" rel="stylesheet" />
 </head>
-<body class="d-flex flex-column">
+<body class="d-flex flex-column" style="background-color: #ffffff;">
 <main class="flex-shrink-0">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container px-5">
-            <a class="navbar-brand" href="{{route('home.index')}}">Website</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00008B;">
+    <div class="container px-5">
+        <a class="navbar-brand" href="{{route('home.index')}}" style="font-weight: bold;">
+            <span style="color: white;">Three</span>
+            <span style="color: gold;">O</span>
+            <span style="color: white;"> Cafe</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
                     @foreach($menu as $dm)
                         @if(sizeof($dm['itemMenu']) > 0)
                             <li class="nav-item dropdown">
-                                <a href="{{$dm['url']}}" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                                <a href="{{$dm['url']}}" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown">
                                     {{$dm['menu']}}
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
                                     @foreach($dm['itemMenu'] as $idm)
                                         <li>
-                                            <a href="{{$idm['sub_menu_url']}}" class="dropdown-item" target="{{$idm['sub_menu_target']}}">
+                                            <a href="{{$idm['sub_menu_url']}}" class="dropdown-item text-white" target="{{$idm['sub_menu_target']}}">
                                                 {{$idm['sub_menu_nama']}}
                                             </a>
                                         </li>
@@ -41,7 +45,7 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a href="{{$dm['url']}}" class="nav-link" target="{{$dm['target']}}">
+                                <a href="{{$dm['url']}}" class="nav-link text-white" target="{{$dm['target']}}">
                                     {{$dm['menu']}}
                                 </a>
                             </li>
