@@ -96,6 +96,12 @@
                 <span>Data Product</span></a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('kasir.index')}}">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Kasir</span></a>
+        </li>
+
     </ul>
     <!-- End of Sidebar -->
 
