@@ -14,7 +14,6 @@
                         <span style="color: red; font-weight: 600; font-size: 9pt;">{{$message}}</span>
                         @enderror
                     </div>
-
                     <button type="submit" class="btn btn-primary">Tambah</button>
                     <a href="{{route('kategori.index')}}" class="btn btn-secondary">Kembali</a>
                 </form>

@@ -16,8 +16,6 @@ return new class extends Migration
             $table->string('judul_berita');
             $table->longText('isi_berita');
             $table->string('gambar_berita');
-            $table->integer('id_kategori');
-            $table->foreign('id_kategori')->references('id_kategori')->on('kategori');
             $table->timestamps();
         });
     }

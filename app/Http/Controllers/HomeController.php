@@ -6,14 +6,15 @@ use Illuminate\Http\Request;
 use App\Models\Menu;
 use App\Models\Berita;
 use App\Models\Page;
+
 class HomeController extends Controller
 {
     public function index()
     {
         #halaman awal
         $menu = $this->getMenu();
-        $berita = Berita::with('kategori')->latest()->get()->take(6);
-        $mostViews = Berita::with('kategori')->orderByDesc('total_views')->get()->take(3);
+        $berita = Berita::latest()->take(6)->get();
+        $mostViews = Berita::orderByDesc('total_views')->take(3)->get();
         return view('frontend.content.home', compact('menu','berita','mostViews'));
     }
 
@@ -41,9 +42,8 @@ class HomeController extends Controller
     {
         #halaman menampilkan seluruh data berita
         $menu = $this->getMenu();
-        $berita = Berita::with('kategori')->latest()->get();
+        $berita = Berita::latest()->get();
         return view('frontend.content.semuaBerita', compact('menu','berita'));
-
     }
 
     private function getMenu()

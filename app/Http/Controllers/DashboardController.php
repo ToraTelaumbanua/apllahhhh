@@ -11,12 +11,14 @@ use App\Models\Kategori;
 
 class DashboardController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         // Fetching data
         $totalBerita = Berita::count();
+        // Hilangkan kategori dari pengambilan data berita
+        $latestBerita = Berita::latest()->take(5)->get();
         $totalKategori = Kategori::count();
         $totalUser = User::count();
-        $latestBerita = Berita::with('Kategori')->latest()->take(5)->get();
 
         // Returning view with data
         return view('backend.content.dashboard', compact('totalBerita', 'totalKategori', 'totalUser', 'latestBerita'));

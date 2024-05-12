@@ -14,7 +14,6 @@
                                 <th>ID</th>
                                 <th>Nama Produk</th>
                                 <th>Harga</th>
-                                <th>Stok</th>
                                 <th>Kategori</th>
                                 <th>Aksi</th>
                             </tr>
@@ -25,15 +24,17 @@
                                     <td>{{ $product->id_product }}</td>
                                     <td>{{ $product->Product_Name }}</td>
                                     <td>{{ $product->Price }}</td>
-                                    <td>{{ $product->Qty }}</td>
-                                    <td>{{ $product->KategoriAA }}</td>
-                                    <td>
+                                    <td>{{ $product->kategori->nama_kategori }}</td> <!-- Perubahan disini -->
+{{--                                    <td>--}}
+{{--                                        <a href="{{ route('product.edit', ['id' => $product->id_product]) }}" class="btn btn-sm btn-secondary"><i class="fa fa-edit"></i> Ubah</a>--}}
+{{--                                        <a href="{{ route('product.hapus', ['id' => $product->id_product]) }}" onclick="return confirm('Anda yakin?')" class="btn btn-sm btn-secondary btn-danger"><i class="fa fa-trash"></i> Hapus</a>--}}
+{{--                                    </td>--}}
 
-                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
+
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-@extends('backend/layout/main')
+@extends('backend.layout.main')
 @section('content')
     <!-- Begin Page Content -->
     <div class="container-fluid">
@@ -86,30 +86,30 @@
                         <h6 class="m-0 font-weight-bold text-primary">Latest Berita</h6>
                     </div>
 
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                            <tr>
-                                <th>Gambar Berita</th>
-                                <th>Judul Berita</th>
-                                <th>Kategori Berita</th>
-                                <th>Total Views</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach ($latestBerita as $row)
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
                                 <tr>
-                                    <td><img src="{{ route('storage',$row->gambar_berita) }}" width="50px" height="50px"></td>
-                                    <td>{{ ($row->judul_berita) }}</td>
-                                    <td>{{ ($row->kategori->nama_kategori) }}</td>
-                                    <td>{{ ($row->total_views) }}x</td>
+                                    <th>Gambar Berita</th>
+                                    <th>Judul Berita</th>
+                                    <!-- Hapus kolom Kategori Berita -->
+                                    <th>Total Views</th>
                                 </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                @foreach ($latestBerita as $row)
+                                    <tr>
+                                        <td><img src="{{ route('storage',$row->gambar_berita) }}" width="50px" height="50px"></td>
+                                        <td>{{ ($row->judul_berita) }}</td>
+                                        <!-- Hapus pengaksesan properti kategori -->
+                                        <td>{{ ($row->total_views) }}x</td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>

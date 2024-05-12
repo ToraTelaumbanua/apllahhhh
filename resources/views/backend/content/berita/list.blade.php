@@ -1,4 +1,4 @@
-@extends('backend/layout/main')
+@extends('backend.layout.main')
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -14,7 +14,6 @@
             <div class="alert alert-{{session()->get('pesan')[0]}}">
                 {{ session()->get('pesan')[1] }}
             </div>
-
         @endif
 
         <div class="card shadow mb-4">
@@ -26,26 +25,26 @@
                             <th>No</th>
                             <th>Gambar Berita </th>
                             <th>Judul Berita</th>
-                            <th>Kategori</th>
+                            <!-- Hapus kolom Kategori -->
                             <th>Aksi</th>
                         </tr>
                         </thead>
                         <tbody>
-                            @php
-                                $no = 1;
-                            @endphp
-                            @foreach ($berita as $row)
+                        @php
+                            $no = 1;
+                        @endphp
+                        @foreach ($berita as $row)
                             <tr>
                                 <td>{{ $no++ }}</td>
                                 <td><img src="{{ route('storage',$row->gambar_berita) }}" width="50px" height="50px"></td>
                                 <td>{{ $row->judul_berita }}</td>
-                                <td>{{ $row->kategori->nama_kategori }}</td>
+                                <!-- Hapus akses ke properti kategori -->
                                 <td>
                                     <a href="{{ route('berita.ubah',$row->id_berita) }}" class="btn btn-sm btn-secondary"><i class="fa fa-edit"></i> Ubah</a>
                                     <a href="{{ route('berita.hapus',$row->id_berita) }}" onclick="return confirm('Anda yakin?')" class="btn btn-sm btn-secondary btn-danger"><i class="fa fa-trash"> </i> Hapus</a>
                                 </td>
                             </tr>
-                            @endforeach
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -53,4 +52,3 @@
         </div>
     </div>
 @endsection
-

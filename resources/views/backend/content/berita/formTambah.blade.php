@@ -9,23 +9,13 @@
                 @csrf
                 <div class="mb-3">
                     <label class="col-form-label">Judul Berita</label>
-                    <input type="text" name="judul_berita" value="{{old('nama_kategori')}}" class="form-control @error('judul_berita') is-invalid @enderror">
+                    <input type="text" name="judul_berita" class="form-control @error('judul_berita') is-invalid @enderror">
                     @error('judul_berita')
                     <span style="color: red; font-weight: 600; font-size: 9pt">{{$message}}</span>
                     @enderror
                 </div>
 
-                <div class="mb-3">
-                    <label class="col-form-label">Kategori Berita</label>
-                    <select name="id_kategori" class="form-control @error('id_kategori') is-invalid @enderror">
-                        @foreach($kategori as $row)
-                            <option value="{{$row->id_kategori}}">{{$row->nama_kategori}}</option>
-                        @endforeach
-                    </select>
-                    @error('id_kategori')
-                    <span style="color: red; font-weight: 600; font-size: 9pt">{{$message}}</span>
-                    @enderror
-                </div>
+
 
                 <div class="mb-3">
                     <label class="col-form-label">Foto Berita</label>

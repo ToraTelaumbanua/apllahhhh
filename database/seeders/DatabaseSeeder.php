@@ -23,15 +23,10 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('test@example.com'),
         ]);
 
-        DB::table('kategori')->insert([
-            'nama_kategori' => 'Nasional'
-        ]);
-
         DB::table('berita')->insert([
             'judul_berita' => 'Lorem_Ipsum',
             'isi_berita' => 'Lorem_Ipsum',
             'gambar_berita' => 'Lorem.jpg',
-            'id_kategori' => 1
         ]);
 
         DB::table('page')->insert([
@@ -82,25 +77,5 @@ class DatabaseSeeder extends Seeder
             'parent_menu' => 3
         ]);
 
-        // Seed students
-        $faker = Factory::create('id_ID');
-        for ($i = 0; $i < 100; $i++) {
-            DB::table('students')->insert([
-                'name' => $faker->name,
-                'email' => $faker->email,
-                'dob' => $faker->date('Y-m-d', now()),
-                'id_teacher' => rand(1, 10)
-            ]);
         }
-
-        // Seed teachers
-        $faker = Factory::create('id_ID');
-        for ($i = 0; $i < 10; $i++) {
-            DB::table('teacher')->insert([
-                'name' => $faker->name,
-                'email' => $faker->email,
-                'dob' => $faker->date('Y-m-d', now())
-            ]);
-        }
-    }
 }
