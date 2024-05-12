@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Three O Cafe</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -99,7 +99,7 @@
 
         <li class="nav-item">
             <a class="nav-link" href="{{route('kasir.index')}}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-cash-register"></i>
                 <span>Kasir</span></a>
         </li>
 
