@@ -33,17 +33,18 @@
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #00008B;">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard.index') }}">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <img src="assets/img/logo.png" alt="logo" class="logo-sidebar">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center " href="{{ route('dashboard.index') }}">
+            <div class="sidebar-brand-icon rotate-n-0">
+                <img src="assets/img/logo.png" alt="Master Menu" class="logo-sidebar " style="width: 70px; height: 70px;">
+
             </div>
         </a>
 
         <!-- Divider -->
-        <hr class="sidebar-divider my-0">
+        <hr class="sidebar-divider my-0 " >
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
@@ -62,37 +63,37 @@
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('berita.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-newspaper"></i>
                 <span>Data Berita</span></a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('kategori.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-folder"></i>
                 <span>Data Kategori</span></a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('user.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-user"></i>
                 <span>Data User</span></a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('page.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-file"></i>
                 <span>Data Page</span></a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('menu.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-bars"></i>
                 <span>Data Menu</span></a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('product.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-shopping-bag"></i>
                 <span>Data Product</span></a>
         </li>
 
@@ -106,9 +107,9 @@
         <div id="content">
 
             <!-- Topbar -->
-            <nav class="navbar navbar-expand navbar-light bg-primary topbar mb-4 static-top shadow">
+            <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="background-color: #00008B;">
 
-            <!-- Sidebar Toggle (Topbar) -->
+                <!-- Sidebar Toggle (Topbar) -->
                 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                     <i class="fa fa-bars"></i>
                 </button>
@@ -156,9 +157,6 @@
                     <li class="nav-item dropdown no-arrow mx-1">
                         <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-bell fa-fw"></i>
-                            <!-- Counter - Alerts -->
-                            <span class="badge badge-danger badge-counter">3+</span>
                         </a>
                         <!-- Dropdown - Alerts -->
                         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -207,9 +205,6 @@
                     <li class="nav-item dropdown no-arrow mx-1">
                         <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-envelope fa-fw"></i>
-                            <!-- Counter - Messages -->
-                            <span class="badge badge-danger badge-counter">7</span>
                         </a>
                         <!-- Dropdown - Messages -->
                         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -279,7 +274,7 @@
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hai, Admin</span>
+                            <span class="mr-2 d-none d-lg-inline text-white small">Hai, Admin</span>
                             <img class="img-profile rounded-circle"
                                  src="{{asset('assets/img/undraw_profile.svg')}}">
                         </a>

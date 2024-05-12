@@ -8,7 +8,6 @@
 
             <div class="col-lg-6 text-right">
                 <a href="{{ route('kategori.tambah') }}" class="btn btn-sm btn-primary"><i class="fa fa-plus"> Tambah</i></a>
-                <a href="{{ route('kategori.exportPdf') }}" class="btn btn-sm btn-primary"><i class="fa fa-file-pdf"> Export PDF</i></a>
             </div>
         </div>
 
