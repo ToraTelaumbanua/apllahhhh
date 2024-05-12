@@ -78,8 +78,12 @@ Route::group(['middleware' => 'auth:user'], function(){
         Route::get('/produk/hapus/{id}', [ProductController::class, 'delete'])->name('product.delete');
         Route::get('/produk/export-pdf', [ProductController::class, 'exportPdf'])->name('product.exportPdf');
 
+
         Route::get('/kasir', [\App\Http\Controllers\KasirController::class, 'index'])->name('kasir.index')->middleware('auth:user');
         Route::post('/kasir/checkout', [\App\Http\Controllers\KasirController::class, 'checkout'])->name('kasir.checkout')->middleware('auth:user');
+        Route::post('/search-barcode', [\App\Http\Controllers\KasirController::class, 'searchProduct']);
+        Route::post('/insert', [\App\Http\Controllers\KasirController::class, 'insert']);
+
 
     });
     Route::get('/Logout',[AuthController::class, 'Logout'])->name('auth.logout');
