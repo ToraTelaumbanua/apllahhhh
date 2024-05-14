@@ -17,11 +17,10 @@
                         <table class="table" id="table-cart">
                             <thead>
                             <tr>
-                                <th>Barcode</th>
                                 <th>Nama Produk</th>
-                                <th>@</th>
-                                <th>Qty</th>
-                                <th>SubTotal</th>
+                                <th>Harga</th>
+                                <th>Kategori</th>
+                                <th>Aksi</th>
                             </tr>
                             </thead>
                             <tbody>
