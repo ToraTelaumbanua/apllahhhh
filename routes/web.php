@@ -75,7 +75,7 @@ Route::group(['middleware' => 'auth:user'], function(){
         Route::post('/produk/prosesTambah', [ProductController::class, 'prosesTambah'])->name('product.prosesTambah');
         Route::get('/produk/ubah/{id}', [ProductController::class, 'edit'])->name('product.edit');
         Route::post('/produk/prosesEdit/{id}', [ProductController::class, 'prosesEdit'])->name('product.prosesEdit');
-        Route::get('/produk/hapus/{id}', [ProductController::class, 'delete'])->name('product.delete');
+        Route::get('/produk/hapus/{id}', [ProductController::class, 'hapus'])->name('product.hapus');
         Route::get('/produk/export-pdf', [ProductController::class, 'exportPdf'])->name('product.exportPdf');
 
 
@@ -100,3 +100,4 @@ Route::get('files/{filename}', function ($filename) {
     $response->header("Content-Type", $type);
     return $response;
 })->name('storage');
+
