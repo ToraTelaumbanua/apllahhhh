@@ -1,5 +1,4 @@
-@extends('layout.main')
-@section('judul','Data Transaksi')
+@extends('backend.layout.main')
 
 @section('content')
     <div class="row">
@@ -46,4 +45,3 @@
     </div>
 
 @endsection
-

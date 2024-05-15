@@ -15,12 +15,13 @@
                         </div>
                     @endforeach
 
-                    <div class="text-end mb-5 mb-xl-0">
-                        <a class="text-decoration-none" href="{{route('home.berita')}}">
-                            More newsberita
+                    <div class="text-start mb-5 mb-xl-0">
+                        <a class="text-decoration-none" href="{{ route('home.berita') }}">
+                            Temukan lebih banyak berita
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
+
                 </div>
                 <div class="col-xl-4">
                     <div class="card border-0 h-100">
@@ -29,15 +30,16 @@
                                 <div class="text-center">
                                     <div class="h6 fw-bolder">Contact</div>
                                     <p class="text-muted mb-4">
-                                        For press inquiries, email us at
+                                        Kirimkan pertanyaan Anda via email <br />
+                                        Kami siap membantu!
                                         <br />
-                                        <a href="#!">press@domain.com</a>
+                                        <a href="#!">EmailThreeOCafe.com</a>
                                     </p>
                                     <div class="h6 fw-bolder">Follow us</div>
-                                    <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-twitter"></i></a>
-                                    <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-facebook"></i></a>
-                                    <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-linkedin"></i></a>
-                                    <a class="fs-5 px-2 link-dark" href="#!"><i class="bi-youtube"></i></a>
+                                    <a class="fs-5 px-2 link-dark" href="https://www.facebook.com/share/WNDgTwwJN6x61XE6/?mibextid=qi2Omg"><i class="bi-facebook"></i></a>
+                                    <a class="fs-5 px-2 link-dark" href="https://www.tiktok.com/@threeocafe"><img src="assets/img/tiktok.svg" alt="TikTok"></a>
+                                    <a class="fs-5 px-2 link-dark" href="https://www.instagram.com/threeocafe/?hl=en"><i class="bi-instagram"></i></a>
+
                                 </div>
                             </div>
                         </div>
@@ -49,7 +51,7 @@
     <!-- Blog preview section-->
     <section class="py-5">
         <div class="container px-5">
-            <h2 class="fw-bolder fs-5 mb-4">Berita Terbaru</h2>
+            <h2 class="fw-bolder fs-5 mb-4">Promo Diskon Terbaru</h2>
             <div class="row gx-5">
                 @foreach($berita as $row)
                     <div class="col-lg-4 mb-5">
@@ -81,7 +83,7 @@
             </div>
             <div class="text-end mb-5 mb-xl-0">
                 <a class="text-decoration-none" href="{{route('home.berita')}}">
-                    More stories
+                    Lebih banyak cerita
                     <i class="bi bi-arrow-right"></i>
                 </a>
             </div>

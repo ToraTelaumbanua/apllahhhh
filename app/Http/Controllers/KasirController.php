@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
 use App\Models\ItemTransaction;
@@ -15,7 +14,7 @@ class KasirController extends Controller
 {
     public function index()
     {
-        return view('content.kasir.index');
+        return view('backend.content.kasir.index');
     }
 
     public function searchProduct(Request $request)
@@ -71,4 +70,3 @@ class KasirController extends Controller
         }
     }
 }
-

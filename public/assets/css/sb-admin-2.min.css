@@ -36,23 +36,26 @@ body {
 
     z-index: 999; /* Atur z-index agar logo berada di atas elemen lain */
 }
-
+<!---->
 .login_form_container {
     position: relative;
     width: 400px;
     height: 550px;
     max-width: 400px;
     max-height: 550px;
-    background: #040717;
+    background: linear-gradient(145deg, #040717, #0a0d29);
     border-radius: 50px 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     margin-top: 150px;
-    opacity: 85%;
+    opacity: 0.95;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
-.login_form_container::before {
+
+.login_form_container::before,
+.login_form_container::after {
     position: absolute;
     width: 170%;
     height: 170%;
@@ -63,22 +66,17 @@ body {
         transparent,
         #FF6A00
     );
-    animation: rotate_border 6s linear infinite;
+    animation: rotate_border 8s linear infinite;
 }
 
 .login_form_container::after {
-    position: absolute;
-    width: 170%;
-    height: 170%;
-    content: "";
     background-image: conic-gradient(
         transparent,
         transparent,
         transparent,
         #0015FF
     );
-    animation: rotate_border 6s linear infinite;
-    animation-delay: -3s;
+    animation-delay: -4s;
 }
 
 @keyframes rotate_border {
@@ -89,16 +87,75 @@ body {
         transform: rotate(360deg);
     }
 }
+
 .login_form {
     position: absolute;
-    content: "";
     background-color: #ffffff;
     border-radius: 50px 5px;
     inset: 5px;
     padding: 50px 40px;
     z-index: 10;
     color: #081b81;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    animation: fade_in 1.2s ease-in-out;
 }
+
+
+
+/* Additional CSS for form elements */
+
+input[type="email"], input[type="password"] {
+    border: 2px solid #081b81;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #081b81;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #061263;
+}
+
+.custom-control-label::before {
+    border: 1px solid #081b81;
+    background-color: transparent;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #081b81;
+}
+
+/* Custom font styles */
+h1, label, input, .custom-control-label {
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+    color: #081b81;
+    margin-bottom: 20px;
+}
+
+.alert-danger {
+    background-color: #ffdddd;
+    color: #d9534f;
+    border: 1px solid #d43f3a;
+    padding: 10px;
+    border-radius: 5px;
+}
+<!---->
 h2 {
     font-size: 40px;
     font-weight: 600;

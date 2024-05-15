@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Login</title>
+    <title>Login Three O Cafe</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('assets/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -30,54 +30,53 @@
 
     <!-- Outer Row -->
     <div class="row justify-content-center">
+        <!-- bagian login -->
 
         <div class="col-xl-5 col-lg-12 col-md-9">
-
             <div class="login_form_container o-hidden border-0 shadow-lg my-5">
-                    <div class="login_form p-5">
-                        <div class="logo-container">
-                            <div class="logo">
-                                <img src="assets/img/logo.png" alt="Logo" />
-                              </div>
+                <div class="login_form p-5" style="font-family: 'Arial', sans-serif;">
+                    <div class="logo-container" style="text-align: center;">
+                        <div class="logo">
+                            <img src="assets/img/logo.png" alt="Logo" />
                         </div>
-                        <div class="text-center">
-                            <h1 class="h1 text-gray-900 mb-4">Login</h1>
+                    </div>
+                    <div class="text-center">
+                        <h1 class="h1 text-gray-900 mb-4" style="font-family: 'Georgia', serif;">Login</h1>
+                    </div>
+
+
+                    @if(session()->has('pesan'))
+                        <div class="alert alert-danger" style="font-family: 'Verdana', sans-serif;">
+                            {{session()->get('pesan')}}
                         </div>
+                    @endif
 
-                        @if(session()->has('pesan'))
-                            <div class="alert alert-danger">
-                                {{session()->get('pesan')}}
+                    <form class="user" method="post" action="{{route('auth.verify')}}">
+                        @csrf
+                        <div class="input_group" style="font-family: 'Arial', sans-serif;">
+                            <i class="fa fa-user"></i> &nbsp; &nbsp;
+                            <input type="email" name="email" class="form-control form-control-user"
+                                   id="exampleInputEmail" aria-describedby="emailHelp"
+                                   placeholder="Enter Email Address..." style="font-family: 'Arial', sans-serif;">
+                        </div>
+                        <div class="input_group" style="font-family: 'Arial', sans-serif;">
+                            <i class="fa fa-unlock-alt"></i> &nbsp; &nbsp;
+                            <input type="password" name="password" class="form-control form-control-user"
+                                   id="exampleInputPassword" placeholder="Password" style="font-family: 'Arial', sans-serif;">
+                        </div>
+                        <div class="input_group" style="font-family: 'Arial', sans-serif;">
+                            <div class="custom-control custom-checkbox small">
+                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                <label class="custom-control-label" for="customCheck">Remember Me</label>
                             </div>
-                        @endif
-
-                        <form class="user" method="post" action="{{route('auth.verify')}}">
-                            @csrf
-                            <div class="input_group">
-                                <i class="fa fa-user"></i> &nbsp; &nbsp;
-                                <input type="email" name="email" class="form-control form-control-user"
-                                       id="exampleInputEmail" aria-describedby="emailHelp"
-                                       placeholder="Enter Email Address...">
-                            </div>
-                            <div class="input_group">
-                                <i class="fa fa-unlock-alt"></i> &nbsp; &nbsp;
-                                <input type="password" name="password" class="form-control form-control-user"
-                                       id="exampleInputPassword" placeholder="Password">
-                            </div>
-                            <div class="input_group">
-                                <div class="custom-control custom-checkbox small">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck">
-                                    <label class="custom-control-label" for="customCheck">Remember
-                                        Me</label>
-                                </div>
-                            </div>
-                            <input type="submit" value="Login" class="btn btn-primary btn-user btn-block">
-                        </form>
+                        </div>
+                        <input type="submit" value="Login" class="btn btn-primary btn-user btn-block" style="font-family: 'Arial', sans-serif;">
+                    </form>
                 </div>
             </div>
-
         </div>
-
     </div>
+
 
 </div>
 

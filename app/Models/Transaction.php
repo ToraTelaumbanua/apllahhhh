@@ -28,4 +28,3 @@ class Transaction extends Model
 
 
 }
-

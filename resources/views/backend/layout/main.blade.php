@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Three O Cafe</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -33,19 +33,20 @@
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #00008B;">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard.index') }}">
-            <div class="sidebar-brand-icon">
-                <img src="assets/img/logo.png" alt="logo" class="logo-sidebar">
-            </div>
+        <li class="nav-item active">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center " href="{{ route('dashboard.index') }}">
+            <div class="sidebar-brand-icon rotate-n-0">
+                <img src="{{ asset('assets/img/logo.png') }}" alt="Master Menu" class="logo-sidebar" style="width: 70px; height: 70px;">
 
-            <div class="sidebar-brand-text mx-3">Three O Cafe</div>
+            </div>
         </a>
+        </li>
 
         <!-- Divider -->
-        <hr class="sidebar-divider my-0">
+        <hr class="sidebar-divider my-0 " >
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
@@ -64,38 +65,44 @@
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('berita.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-newspaper"></i>
                 <span>Data Berita</span></a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('kategori.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-folder"></i>
                 <span>Data Kategori</span></a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('user.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-user"></i>
                 <span>Data User</span></a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('page.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-file"></i>
                 <span>Data Page</span></a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('menu.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-bars"></i>
                 <span>Data Menu</span></a>
         </li>
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('product.index') }}">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-shopping-bag"></i>
                 <span>Data Product</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('kasir.index')}}">
+                <i class="fas fa-fw fa-cash-register"></i>
+                <span>Kasir</span></a>
         </li>
 
     </ul>
@@ -108,7 +115,7 @@
         <div id="content">
 
             <!-- Topbar -->
-            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="background-color: #00008B;">
 
                 <!-- Sidebar Toggle (Topbar) -->
                 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -118,14 +125,12 @@
                 <!-- Topbar Search -->
                 <form
                     class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                               aria-label="Search" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-search fa-sm"></i>
-                            </button>
-                        </div>
+                    <div class="input-group ">
+                        <a class="navbar-brand" href="{{route('home.index')}}" style="font-weight: bold;">
+                            <span style="color: white;">Three</span>
+                            <span style="color: gold;">O</span>
+                            <span style="color: white;"> Cafe</span>
+                        </a>
                     </div>
                 </form>
 
@@ -160,9 +165,6 @@
                     <li class="nav-item dropdown no-arrow mx-1">
                         <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-bell fa-fw"></i>
-                            <!-- Counter - Alerts -->
-                            <span class="badge badge-danger badge-counter">3+</span>
                         </a>
                         <!-- Dropdown - Alerts -->
                         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -211,9 +213,6 @@
                     <li class="nav-item dropdown no-arrow mx-1">
                         <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-envelope fa-fw"></i>
-                            <!-- Counter - Messages -->
-                            <span class="badge badge-danger badge-counter">7</span>
                         </a>
                         <!-- Dropdown - Messages -->
                         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -283,9 +282,9 @@
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hai, Admin</span>
+                            <span class="mr-2 d-none d-lg-inline text-white small">Hai, Admin</span>
                             <img class="img-profile rounded-circle"
-                                 src="{{asset('assets/img/undraw_profile.svg')}}">
+                                 src="{{ asset('assets/img/logo.png') }}" style="width: 50px; height: 50px;">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
