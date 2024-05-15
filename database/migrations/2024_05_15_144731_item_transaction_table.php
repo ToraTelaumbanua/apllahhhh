@@ -10,11 +10,21 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
+//        item_transactions :
+//        - id
+//        - id_transactions
+//        - id_product
+//        - price
+//        - qty
+//        - total
+
+        Schema::create('item_transactions', function (Blueprint $table) {
             $table->id();
-            $table->string('barcode');
-            $table->string('name');
+            $table->bigInteger('id_transaction')->nullable();
+            $table->bigInteger('id_product')->nullable();
             $table->decimal('price', 20, 0);
+            $table->integer('qty');
+            $table->decimal('total', 20, 0);
             $table->softDeletes();
             $table->timestamps();
         });
@@ -25,7 +35,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('item_transactions');
     }
 };
-

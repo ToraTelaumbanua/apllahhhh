@@ -1,5 +1,5 @@
 @extends('backend.layout.main')
-@section('judul','Aplikasi Kasir')
+
 @section('content')
     <div class="row">
         <div class="col-12">
