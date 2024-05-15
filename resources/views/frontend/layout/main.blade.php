@@ -13,15 +13,19 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{asset('assets-fe/css/styles.css')}}" rel="stylesheet" />
 </head>
-<body class="d-flex flex-column" style="background-color: #ffffff;">
+
+<body class="d-flex flex-column" style="background-color: #f6ebda;">
+
+</body>
+
 <main class="flex-shrink-0">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00008B;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FFFFFF;">
     <div class="container px-5">
         <a class="navbar-brand" href="{{route('home.index')}}" style="font-weight: bold;">
-            <span style="color: white;">Three</span>
-            <span style="color: gold;">O</span>
-            <span style="color: white;"> Cafe</span>
+            <span style="color: #00008B;">Three</span>
+            <span style="color: #ff902a;">O</span>
+            <span style="color: #00008B;"> Cafe</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -45,7 +49,7 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a href="{{$dm['url']}}" class="nav-link text-white" target="{{$dm['target']}}">
+                                <a href="{{$dm['url']}}" class="nav-link text-black" target="{{$dm['target']}}">
                                     {{$dm['menu']}}
                                 </a>
                             </li>
@@ -63,13 +67,6 @@
     <div class="container px-5">
         <div class="row align-items-center justify-content-between flex-column flex-sm-row">
             <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2023</div></div>
-            <div class="col-auto">
-                <a class="link-light small" href="#!">Privacy</a>
-                <span class="text-white mx-1">&middot;</span>
-                <a class="link-light small" href="#!">Terms</a>
-                <span class="text-white mx-1">&middot;</span>
-                <a class="link-light small" href="#!">Contact</a>
-            </div>
         </div>
     </div>
 </footer>
